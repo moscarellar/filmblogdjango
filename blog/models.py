@@ -2,6 +2,10 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
+from django.urls import reverse
+from django.utils.text import slugify
+
+
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
@@ -23,6 +27,10 @@ class Post(models.Model):
 
     class Meta:
         ordering = ["-created_on"]
+    
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        super(Post, self).save(*args, **kwargs)
 
     def __str__(self):
         return self.title
@@ -45,3 +53,17 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
+
+
+class Profile(models.Model):
+   user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
+   bio = models.TextField()
+
+   def __str__(self):
+        return str(self.user)
+
+
+
+   def __str__(self):
+       return str(self.user)
+

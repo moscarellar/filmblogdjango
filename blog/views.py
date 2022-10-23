@@ -1,8 +1,20 @@
 from django.shortcuts import render, get_object_or_404, reverse
-from django.views import generic, View
+from django.views import generic
+from django.views.generic import DetailView
+from django.views.generic import CreateView
+from django.views.generic import View
+from django.views.generic import ListView
+from django.views.generic import UpdateView
+from django.views.generic import DeleteView
 from django.http import HttpResponseRedirect
 from .models import Post
-from .forms import CommentForm, PostForm
+from .forms import CommentForm, PostForm, EditProfileForm, PasswordChangingForm
+
+from django.contrib.auth.forms import UserChangeForm, PasswordChangeForm
+from django.contrib.auth.views import PasswordChangeView
+from django.urls import reverse_lazy
+
+
 
 
 class PostList(generic.ListView):
@@ -81,3 +93,29 @@ class AddPost(CreateView):
     model = Post
     form_class = PostForm
     template_name = 'add_post.html'
+    fields = '__all__'
+
+class UserEditView(UpdateView):
+   form_class = EditProfileForm
+   template_name = 'edit_profile.html'
+
+
+
+   success_url = reverse_lazy('home')
+
+
+
+   def get_object(self):
+       return self.request.user
+
+
+class PasswordsChangeView(PasswordChangeView):
+   model = Post
+   template_name = 'change_password.html'
+   form_class = PasswordChangingForm
+   success_url = reverse_lazy('password_success')
+
+
+def password_success(request):
+   return render(request, 'password_success.html', {})
+

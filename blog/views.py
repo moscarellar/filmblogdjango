@@ -8,7 +8,7 @@ from django.views.generic import UpdateView
 from django.views.generic import DeleteView
 from django.http import HttpResponseRedirect
 from .models import Post
-from .forms import CommentForm, PostForm
+from .forms import CommentForm
 
 from django.contrib.auth.forms import UserChangeForm, PasswordChangeForm
 from django.contrib.auth.views import PasswordChangeView

@@ -8,7 +8,7 @@ from django.views.generic import UpdateView
 from django.views.generic import DeleteView
 from django.http import HttpResponseRedirect
 from .models import Post
-from .forms import CommentForm, PostForm, EditProfileForm, PasswordChangingForm
+from .forms import CommentForm, PostForm
 
 from django.contrib.auth.forms import UserChangeForm, PasswordChangeForm
 from django.contrib.auth.views import PasswordChangeView
@@ -88,34 +88,3 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
-
-class AddPost(CreateView):
-    model = Post
-    form_class = PostForm
-    template_name = 'add_post.html'
-    fields = '__all__'
-
-class UserEditView(UpdateView):
-   form_class = EditProfileForm
-   template_name = 'edit_profile.html'
-
-
-
-   success_url = reverse_lazy('home')
-
-
-
-   def get_object(self):
-       return self.request.user
-
-
-class PasswordsChangeView(PasswordChangeView):
-   model = Post
-   template_name = 'change_password.html'
-   form_class = PasswordChangingForm
-   success_url = reverse_lazy('password_success')
-
-
-def password_success(request):
-   return render(request, 'password_success.html', {})
-

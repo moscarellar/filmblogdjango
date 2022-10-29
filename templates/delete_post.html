@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<header>
+    <div class="container-fluid" id="image">
+        <div class="row px-4 text-center">
+            <img class="img-fluid header-image" id="main-background"
+                src="https://res.cloudinary.com/dxhzp2rnu/image/upload/v1662637113/sample.jpg"
+                alt="blue/pink background image">
+            <div class="col-lg-6 mx-auto">
+                <div class="caption">
+                    <div class="text-center-caption">
+                        <h1 class="post-title fw-bolder text-uppercase">Delete Post</h1>
+                        <h6 class="post-subtitle fw-bold">You are deleting // {{ post.title }}</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<form class="text-center m-3" action="." method="POST">
+    {% csrf_token %}
+    <strong>Are you sure you want to delete this post? This action can't be reverted</strong>
+
+    <p><button class="btn btn-signup center m-3" id="button">I'm Sure &raquo;</button></p>
+</form>
+
+{%endblock%}

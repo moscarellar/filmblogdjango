@@ -28,7 +28,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 X_FRAME_OPTIONS: 'SAMEORIGIN'
 
@@ -99,6 +99,23 @@ TEMPLATES = [
         },
     },
 ]
+
+CKEDITOR_CONFIGS = {	
+    'default': {	
+        'toolbar': [	
+            ['-', 'Bold', 'Italic', 'Underline', 'Undo', 'Redo',	
+             '-', 'Link', 'Unlink', 'Anchor',	
+             '-', 'NumberedList', 'BulletedList', 'Outdent', 'Indent', 'Blockquote',	
+             '-', 'Styles', 'Format',	
+             '-', 'Image',	
+             '-', 'Source',	
+             '-', 'Maximize',	
+             ],	
+        ],	
+        'width': 'auto',	
+    },	
+}	
+WSGI_APPLICATION = 'gamernetic.wsgi.application'
 
 WSGI_APPLICATION = 'filmblog.wsgi.application'
 

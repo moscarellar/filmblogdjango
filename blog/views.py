@@ -1,23 +1,16 @@
 from django.shortcuts import render, get_object_or_404, reverse
-from django.views import generic
-from django.views.generic import DetailView
-from django.views.generic import CreateView
-from django.views.generic import View
-from django.views.generic import ListView
-from django.views.generic import UpdateView
-from django.views.generic import DeleteView
+from django.views.generic import (
+    View, CreateView, ListView, UpdateView, DeleteView
+)
 from django.http import HttpResponseRedirect
-from .models import Post
-from .forms import CommentForm
-
 from django.contrib.auth.forms import UserChangeForm, PasswordChangeForm
 from django.contrib.auth.views import PasswordChangeView
 from django.urls import reverse_lazy
+from .models import Post
+from .forms import CommentForm, PostForm, EditProfileForm, PasswordChangingForm
 
 
-
-
-class PostList(generic.ListView):
+class PostList(ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by("-created_on")
     template_name = "index.html"
@@ -29,7 +22,7 @@ class PostDetail(View):
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
-        comments = post.comments.filter(approved=True).order_by("-created_on")
+        comments = post.comments.filter(approved=True).order_by('created_on')
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
@@ -42,20 +35,20 @@ class PostDetail(View):
                 "comments": comments,
                 "commented": False,
                 "liked": liked,
-                "comment_form": CommentForm(),
+                "comment_form": CommentForm()
             },
         )
-    
-    def post(self, request, slug, *args, **kwargs):
 
+    def post(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
-        comments = post.comments.filter(approved=True).order_by("-created_on")
+        comments = post.comments.filter(approved=True).order_by('created_on')
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
 
         comment_form = CommentForm(data=request.POST)
+
         if comment_form.is_valid():
             comment_form.instance.email = request.user.email
             comment_form.instance.name = request.user.username
@@ -72,19 +65,59 @@ class PostDetail(View):
                 "post": post,
                 "comments": comments,
                 "commented": True,
-                "comment_form": CommentForm(),
-                "liked": liked
+                "liked": liked,
+                "comment_form": CommentForm()
             },
         )
 
 
 class PostLike(View):
-    
-    def post(self, request, slug, *args, **kwargs):
+
+    def post(self, request, slug):
         post = get_object_or_404(Post, slug=slug)
+
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
         else:
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+class AddPost(CreateView):
+    model = Post
+    form_class = PostForm
+    template_name = 'add_post.html'
+
+
+class UpdatePostView(UpdateView):
+    model = Post
+    form_class = PostForm
+    template_name = 'update_post.html'
+
+
+class DeletePostView(DeleteView):
+    model = Post
+    template_name = 'delete_post.html'
+    success_url = reverse_lazy('home')
+
+
+class UserEditView(UpdateView):
+    form_class = EditProfileForm
+    template_name = 'edit_profile.html'
+
+    success_url = reverse_lazy('home')
+
+    def get_object(self):
+        return self.request.user
+
+
+class PasswordsChangeView(PasswordChangeView):
+    model = Post
+    template_name = 'change_password.html'
+    form_class = PasswordChangingForm
+    success_url = reverse_lazy('password_success')
+
+
+def password_success(request):
+    return render(request, 'password_success.html', {})

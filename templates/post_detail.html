@@ -5,14 +5,14 @@
 
 <div class="container">
     <div class="row justify-content-center g-0">
-        <div class="col-md-7 masthead-image">
+    
             {% if "placeholder" in post.featured_image.url %}
-            <img class="rounded-pill post-image"
+            <img
                 src="https://res.cloudinary.com/dxhzp2rnu/image/upload/v1667151640/Screen_Shot_2022-10-30_at_17.39.19_remz5u.png">
             {% else %}
-            <img class="rounded-pill post-image" alt="Authors chosen photo" src=" {{ post.featured_image.url }}">
+            <img alt="Authors chosen photo" src=" {{ post.featured_image.url }}">
             {% endif %}
-        </div>
+    
     </div>
 </div>
 

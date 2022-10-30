@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% load social_share %}
 {% block content %}
 
 {% load crispy_forms_tags %}
@@ -9,7 +8,7 @@
         <div class="col-md-7 masthead-image">
             {% if "placeholder" in post.featured_image.url %}
             <img class="rounded-pill post-image"
-                src="https://res.cloudinary.com/dxhzp2rnu/image/upload/v1667076908/gatesoffilmheaven_yium7j.jpg>
+                src="https://res.cloudinary.com/dxhzp2rnu/image/upload/v1667073762/FilmPostProject_ykwztk.png">
             {% else %}
             <img class="rounded-pill post-image" alt="Authors chosen photo" src=" {{ post.featured_image.url }}">
             {% endif %}
@@ -58,7 +57,6 @@
                         </div>
                         {% endwith %}
                     </div>
-                    {% post_to_twitter "New blog post: Check it out!" object_or_url "<p class='twitter'>Share to Twitter</p>" %}
                     {% if user.id == post.author.id %}
                     <small>
                         <p>

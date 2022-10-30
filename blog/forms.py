@@ -16,12 +16,12 @@ class PostForm (forms.ModelForm):
                   'content', 'author')
 
         widgets = {
-            # 'title': forms.TextInput(attrs={'placeholder':
-            #                                 'Input your title'}),
-            # 'excerpt': forms.TextInput(attrs={'placeholder':
-            #                                   'Write it here'}),
-            # 'content': forms.TextInput(attrs={'placeholder':
-            #                                 'Write your content here'}),
+            'title': forms.TextInput(attrs={'placeholder':
+                                            'Input your title'}),
+            'excerpt': forms.TextInput(attrs={'placeholder':
+                                              'Write it here'}),
+            'content': forms.TextInput(attrs={'placeholder':
+                                            'Write your content here'}),
             'author': forms.TextInput(
                 attrs={'class': 'form-control', 'value': '',
                        'id': 'user', 'type': 'hidden'}),

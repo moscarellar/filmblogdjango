@@ -22,9 +22,9 @@
 <form class="text-center m-3" action="." method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.media }}
-    <script>
+    <!-- <script>
         CKEDITOR.replace('editor1');
-    </script>
+    </script> -->
     {{ form.as_p }}
     <button class="btn btn-signup right" id="button">Post &raquo;</button>
 </form>

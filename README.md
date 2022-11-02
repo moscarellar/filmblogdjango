@@ -394,3 +394,5 @@ This project was specially difficult for me in .
 
 # Credits
 My project was heavily based on Code Institute tutorials. I also learnt different approaches from Youtube and reutilize code from several projects.
+https://www.youtube.com/playlist?list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi
+https://www.youtube.com/watch?v=OBsLgCm-Ayo&list=PL_KegS2ON4s580mS3nPt5x_eu6kO2cvOc

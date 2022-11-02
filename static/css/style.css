@@ -1,12 +1,12 @@
 body {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Arial', sans-serif;
     color: black;
 }
 
 /* navbar */
 
 .nav-active:hover {
-    color: #ff0030;
+    color: #40CFFF;
 }
 
 /* header image */
@@ -17,7 +17,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    background-color: #ff0030;
+    background-color: #40CFFF;
     color: black;
 }
 
@@ -42,7 +42,7 @@ body {
     position: absolute;
     bottom: 0%;
     left: 0%;
-    background-color: #ff0030;
+    background-color: #40CFFF;
 }
 
 .author {
@@ -51,21 +51,15 @@ body {
     color: black;
 }
 
-.twitter {
-    color: #ff0030;
-    text-transform: uppercase;
-    font-weight: bold;
-    display: inline-block;
-}
 
 .post-caption {
-    background-color: #ff0030;
+    background-color: #40CFFF;
     color: black;
     text-align: center;
 }
 
 .btn-like {
-    color: #ff0030;
+    color: #40CFFF;
     border: none;
     background: transparent;
 }
@@ -80,11 +74,11 @@ body {
 /* post details */
 
 .custom-tooltip:hover {
-    color: #ff0030;
+    color: #40CFFF;
 }
 
 #comment-signup {
-    color: #ff0030
+    color: #40CFFF;
 }
 
 #comment-signup:hover {
@@ -106,7 +100,7 @@ body {
 }
 
 #button {
-    background-color: #ff0030;
+    background-color: #40CFFF;
     color: black;
     border-radius: 100px;
     font-weight: bold;
@@ -125,7 +119,7 @@ body {
 }
 
 #change_password:hover {
-    color: #ff0030;
+    color: #40CFFF;
 }
 
 /* footer */
@@ -140,11 +134,11 @@ li>a {
 }
 
 a:hover {
-    color: #ff0030;
+    color:#40CFFF;
 }
 
 #copyright {
-    color: #ff0030;
+    color:#40CFFF;
 }
 
 /* media queries */

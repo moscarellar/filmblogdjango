@@ -105,7 +105,6 @@ class DeletePostView(DeleteView):
 class UserEditView(UpdateView):
     form_class = EditProfileForm
     template_name = 'edit_profile.html'
-
     success_url = reverse_lazy('home')
 
     def get_object(self):

@@ -7,11 +7,11 @@
         <div class="row px-4 text-center">
             <img class="img-fluid header-image" id="main-background"
                 src="https://res.cloudinary.com/dxhzp2rnu/image/upload/v1667151640/Screen_Shot_2022-10-30_at_17.39.19_remz5u.png"
-                alt="blue/pink background image">
+                alt="FilmPost Large Banner">
             <div class="col-lg-6 mx-auto">
                 <div class="caption">
                     <div class="text-center-caption">
-                        <h1 class="post-title fw-bolder text-uppercase">Add your post</h1>
+                        <h1 class="post-title fw-bolder text-uppercase">Create your post</h1>
                     </div>
                 </div>
             </div>
@@ -21,10 +21,6 @@
 
 <form class="text-center m-3" action="." method="POST" enctype="multipart/form-data">
     {% csrf_token %}
-    {{ form.media }}
-    <!-- <script>
-        CKEDITOR.replace('editor1');
-    </script> -->
     {{ form.as_p }}
     <button class="btn btn-signup right" id="button">Post &raquo;</button>
 </form>

@@ -11,7 +11,9 @@ urlpatterns = [
     path('password/', PasswordsChangeView.as_view(), name='change_password'),
     path('password_success', views.password_success, name='password_success'),
     path('like/<slug:slug>/', PostLike.as_view(), name='post_like'),
-    path('create/', AddPost.as_view(), name='create_post'),
+
+    path('add/', AddPost.as_view(), name='add_post'),
+    
     path('<slug:slug>/', PostDetail.as_view(), name='post_detail'),
     path('edit/<slug:slug>/', UpdatePostView.as_view(), name='update_post'),
     path('<slug:slug>/delete/', DeletePostView.as_view(), name='delete'),

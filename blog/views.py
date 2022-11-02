@@ -87,7 +87,7 @@ class PostLike(View):
 class AddPost(CreateView):
     model = Post
     form_class = PostForm
-    template_name = 'add_post.html'
+    template_name = 'add.html'
 
 
 class UpdatePostView(UpdateView):

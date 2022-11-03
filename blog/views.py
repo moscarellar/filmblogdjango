@@ -93,18 +93,18 @@ class AddPost(CreateView):
 class UpdatePostView(UpdateView):
     model = Post
     form_class = PostForm
-    template_name = 'update_post.html'
+    template_name = 'postupdate.html'
 
 
 class DeletePostView(DeleteView):
     model = Post
-    template_name = 'delete_post.html'
+    template_name = 'deletepost.html'
     success_url = reverse_lazy('home')
 
 
 class UserEditView(UpdateView):
     form_class = EditProfileForm
-    template_name = 'edit_profile.html'
+    template_name = 'editprofile.html'
     success_url = reverse_lazy('home')
 
     def get_object(self):
@@ -119,4 +119,4 @@ class PasswordsChangeView(PasswordChangeView):
 
 
 def password_success(request):
-    return render(request, 'password_success.html', {})
+    return render(request, 'successpassword.html', {})

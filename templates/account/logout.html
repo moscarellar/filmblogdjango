@@ -1,8 +1,5 @@
 {% extends "base.html" %}
 
-{% load i18n %}
-
-{% block head_title %}{% trans "Sign Out" %}{% endblock %}
 
 {% block content %}
 
@@ -16,8 +13,8 @@
             <div class="col-lg-6 mx-auto">
                 <div class="caption">
                     <div class="text-center-caption">
-                        <h1 class="post-title fw-bolder text-uppercase">{% trans "Log out" %}</h1>
-                        <h6 class="post-subtitle fw-bold">Posts about your favourite films. Are you sure you want to log out?</h6>
+                        <h1 class="post-title fw-bolder text-uppercase">Log out</h1>
+                        <h6 class="post-subtitle fw-bold">You will log out.</h6>
                     </div>
                 </div>
             </div>
@@ -32,7 +29,7 @@
             {% if redirect_field_value %}
             <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
             {% endif %}
-            <button class="btn btn-signup text-center" id="button" type="submit">{% trans 'Sign Out »' %}</button>
+            <button class="btn btn-signup text-center" id="button" type="submit">Sign Out »</button>
         </form>
     </div>
 </div>

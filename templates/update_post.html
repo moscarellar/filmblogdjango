@@ -11,8 +11,8 @@
             <div class="col-lg-6 mx-auto">
                 <div class="caption">
                     <div class="text-center-caption">
-                        <h1 class="post-title fw-bolder text-uppercase">Update your post</h1>
-                        <h6 class="post-subtitle fw-bold">Forgot to mention something? Found some typos?</h6>
+                        <h1 class="post-title fw-bolder text-uppercase">Edit Post</h1>
+                        <h6 class="post-subtitle fw-bold">Go ahead and correct your post</h6>
                     </div>
                 </div>
             </div>
@@ -23,7 +23,6 @@
 {% if user.id == post.author.id %}
 <form class="text-center m-3" action="." method="POST" enctype="multipart/form-data">
     {% csrf_token %}
-    {{ form.media }}
     {{ form.as_p }}
     <button class="btn btn-signup right" id="button">Post &raquo;</button>
 </form>

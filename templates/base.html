@@ -35,40 +35,40 @@
             </a>
             <div id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="text-decoration-none text-uppercase fw-bolder fs-5" id="nav-path" aria-current="page"
+                    <li class="nav-link">
+                        <a class="" id="nav-path" aria-current="page"
                             href="{% url 'home' %}">Home- </a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="text-decoration-none text-uppercase fw-bolder fs-5" href="#"
+                        <a class="nav-link" href="#"
                             aria-expanded="false">
                             {{ user }}
                         </a>
                         <ul class="nav-item">
                             {% if user.is_staff %}
                             <li class="nav-item">
-                                <a class="text-decoration-none text-uppercase fw-bolder fs-5"
+                                <a class="nav-link"
                                     aria-current="page" href="{% url 'add_post' %}">- Add Post</a>
                             </li>
                             {% endif %}
                             <li class="nav-item">
-                                <a class="text-decoration-none text-uppercase fw-bolder fs-5"
+                                <a class="nav-link"
                                     href="{% url 'edit_profile' %}">Edit Profile</a>
                             </li>
                             <li class="nav-item">
-                                <a class="text-decoration-none text-uppercase fw-bolder fs-5"
+                                <a class="nav-link"
                                     href="{% url 'account_logout' %}">Logout</a>
                             </li>
                         </ul>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="text-decoration-none text-uppercase fw-bolder fs-5"
+                        <a class="nav-link"
                             href="{% url 'account_signup' %}">Register- </a>
                     </li>
                     <li class="nav-item">
-                        <a class="text-decoration-none text-uppercase fw-bolder fs-5"
+                        <a class="nav-link"
                             href="{% url 'account_login' %}">Login </a>
                     </li>
                     {% endif %}
@@ -93,7 +93,7 @@
                         <li>
                             <a class="text-decoration-none" href="https://www.linkedin.com/in/raymundo-castillo-moscarella/"
                                 target="_blank" aria-label="Link to LinkedIn">
-                                <i class="fa-brands fa-linkedin-in"></i>
+                                <i class="fab fa-linkedin-in"></i>
                             </a>
                         </li>             </ul>
                     <p class="text-center text-dark fs-6 fw-bold">Developed by Raymundo Castillo Moscarella for Code Institute Full Stack Software Developer Diploma.</p>

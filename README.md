@@ -161,40 +161,43 @@ The technologies used for this project are: HTML, CSS, JS, Booststrap, Django, H
 
 ### Code Validation
 
-Code was validated through various sources: 
+Code validation as follows: 
 
 * HTML Validation
 
   All HTML code was checked with the [W3C Markup Validation Service](https://validator.w3.org/).
 
-   ![image](https://user-images.deb5.png)
-   
+<details>
+
+   ![image](static/css/images/html.png)
+</details>
+
+<hr/>
+
 * CSS Validation
 
-  All CSS code was checked with the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/).
+  CSS validated through Jigsaw.w3.org/css-validator.
 
 <details>
 
-   ![image](https://user-images.githubusercontent.com/98277650/187975424-1d87fd98-b930-4009-874a-adbb4210bd86.png)
+   ![image](static/css/images/css.png)
 </details>
+
+<hr/>
 
 * Python Validation
 
-  All Python code was checked with the [PEP8 Online Service](http://pep8online.com/).
+ Python code was checked with the [PEP8 Online Service](http://pep8online.com/).
 
- admin.py
-  ![image](https://user-images.githubusercontent.com/98277650/188003211-31fd93b3-c8bb-4e13-ab52-b9ef5f929f03.png)
+admin.py
 apps.py
- (https://user-images.githubusercontent.com/98277650/188003527-aa13b4d9-f627-474e-a6d2-8aafae96a2f9.png)
 forms.py
-  ![image](https://user-images.githubusercontent.com/98277650/188004880-1f45b1fa-234b-42d9-9b09-01a9201fb825.png)
 models.py
-  ![image](https://user-images.githubusercontent.com/98277650/188005177-1c8a8ed1-2d8a-4de6-aab0-e5c2b07e8efc.png)
 urls.py
-  ![image](https://user-images.githubusercontent.com/98277650/188005370-ba06262e-cb7e-4d7f-b5a2-443bd9b1282a.png)
 views.py
-  ![image](https://user-images.githubusercontent.com/98277650/188005494-cc4cd2bd-4cd8-446a-a2a2-0681761026f8.png)
 
+
+<hr/>
 * Accessibility
 
 accessibility tested with the [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/).
@@ -202,6 +205,7 @@ accessibility tested with the [WAVE Web Accessibility Evaluation Tool](https://w
 WAVE report
 
   ![image](static/images/readme/wave.png)
+<hr/>
 
 ## Testing
 
@@ -209,6 +213,8 @@ WAVE report
 
 Google Doc
 ![image](static/images/readme/manual-testing.png)
+
+<hr/>
 
 
 ## Bugs

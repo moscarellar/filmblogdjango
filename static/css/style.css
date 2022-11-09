@@ -2,15 +2,8 @@ body {
     font-family: 'Roboto', sans-serif;
     color: black;
 }
-
 /* navbar */
-
-.nav-active:hover {
-    color: #40CFFF;
-}
-
 /* header image */
-
 .caption {
     position: absolute;
     top: 50%;
@@ -20,85 +13,52 @@ body {
     background-color: #40CFFF;
     color: black;
 }
-
-.indeximage {
-    height: 10rem;
-    border-radius: 100px;
-    object-fit: cover;
-}
-
 #banner {
     position: relative;
     text-align: center;
 }
-
 /* posts on home page view */
-
 .image-container {
     position: relative;
 }
-
 .image-flash {
     position: absolute;
     bottom: 0%;
     left: 0%;
     background-color: #40CFFF;
 }
-
 .author {
     text-transform: uppercase;
     display: inline;
     color: black;
 }
-
-
 .post-caption {
     background-color: #40CFFF;
     color: black;
     text-align: center;
 }
-
 .btn-like {
     color: #40CFFF;
     border: none;
     background: transparent;
 }
-
 .btn-like:hover,
 .btn-like:active {
     color: black;
     background: transparent;
     border: none;
 }
-
 /* post details */
-
 .custom-tooltip:hover {
     color: #40CFFF;
 }
-
 #comment-signup {
     color: #40CFFF;
 }
-
 #comment-signup:hover {
     color: black
 }
-
-.post-image {
-    width: 100%;
-}
-
 /* account register page */
-
-#sign-up {
-    color: black;
-}
-
-#sign-up:hover {
-    color: white;
-}
-
 #button {
     background-color: #40CFFF;
     color: black;
@@ -106,54 +66,31 @@ body {
     font-weight: bold;
     text-transform: uppercase;
 }
-
 #button:hover {
     background-color: black;
     color: white;
 }
-
 /* profile editing */
-
-#change_password {
-    color: black;
-}
-
-#change_password:hover {
-    color: #40CFFF;
-}
-
 /* footer */
-
 ul {
     display: inline-flex;
 }
-
 li>a {
     padding: 15px;
     color: black;
 }
-
 a:hover {
     color:#40CFFF;
 }
-
-#copyright {
-    color:#40CFFF;
-}
-
 /* media queries */
-
 @media screen and (min-width: 0px) and (max-width: 767px) {
-
     /* changed the properties of the colored image/text within on smaller devices */
     #main-background {
         height: 10rem;
     }
-
     .text-center-caption h1 {
         font-size: 30px;
     }
-
     .text-center-caption h6 {
         font-size: 15px;
     }

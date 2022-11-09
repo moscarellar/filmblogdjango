@@ -20,49 +20,41 @@
 This is a blog created in Django for completion of 4th project at Code Institute (Full Stack Developer Course).
 Please find the link [here](https://djangofilmblog.herokuapp.com/).
 
-![image](https://user-images.png)
-
+![log-in-wireframe](static/images/.png)
 ***
 
 # User Stories and Design
 
 ### First Time User Goals
-<details><summary>First Time User Goals</summary>
+First Time User Goals
 
-* As a First Time User, I understand the objective of the blog.
-* As a First Time User, I understand how to navigate through the website.
-* As a First Time User, I can register an account.
-* As a First Time User, I can read blog's posts.
-</details>
-<details><summary>Frequent User Goals</summary>
+* As a First Visit User, I understand the objective of the blog.
+* As a First Visit User, I understand how to navigate through the website.
+* As a First Visit User, I can register an account.
+* As a First Visit User, I can read blog's posts.
 
-* As a Frequent User, I can log in to gain access to my account.
-* As a Frequent User, I can create my own blog post and post it on the website.
-* As a Frequent User, I can edit and delete my posts.
-* As a Frequent User, I can comment on a blog post.
-* As a Frequent User, I can like a post.
-* As a Frequent User, I can change my password incase their is a security risk.
-</details>
+Registered User Goals
 
-<details><summary>Admin User Goals</summary>
+* As a Registered User, I can log in to check the blog.
+* As a Registered User, I can post my own comments in the blog.
+* As a Registered User, I can modify and edit my posts.
+* As a Registered User, I can comment existing blog posts.
+* As a Registered User, I can change my password.
+
+Admin User Goals
 
 * As an Admin, I can create, read, update and delete posts from admin panel and directly from website.
 * As an Admin, I can approve or disapprove comments.
-</details>
+* As an Admin, I can determine specific level of priviledge of users in order to post blogs.
 
 ***
 ### Design
 
-<details>
-
-</details>
-
-<details><summary>Imagery</summary>
+Imagery</summary>
 Images are mainly depicting 
 ![Imagery](static/images/readme/readme-placeholder.jpg)
-</details>
 
-<details><summary>Color Scheme</summary>
+Color Scheme</summary>
 Three colors are used in this website, these being #000000, #FFFFFF and #FF0030. The background, text and foreground colors have a sufficient contrast ratio to aid with accessibility.
 
 ![Color Pallete](static/images/readme/palette.png)

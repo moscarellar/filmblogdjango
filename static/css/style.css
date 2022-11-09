@@ -21,13 +21,13 @@ body {
     color: black;
 }
 
-.header-image {
+.indeximage {
     height: 10rem;
     border-radius: 100px;
     object-fit: cover;
 }
 
-#image {
+#banner {
     position: relative;
     text-align: center;
 }

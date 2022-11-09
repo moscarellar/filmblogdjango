@@ -82,9 +82,8 @@ li>a {
 a:hover {
     color:#40CFFF;
 }
-/* media queries */
+/* media queries
 @media screen and (min-width: 0px) and (max-width: 767px) {
-    /* changed the properties of the colored image/text within on smaller devices */
     #main-background {
         height: 10rem;
     }
@@ -93,5 +92,5 @@ a:hover {
     }
     .text-center-caption h6 {
         font-size: 15px;
-    }
+    } */
 }

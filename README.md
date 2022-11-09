@@ -187,7 +187,7 @@ Code validation as follows:
 
 * Python Validation
 
- Python code was checked with the [PEP8 Online Service](http://pep8online.com/).
+ Python code was checked with the PEP8 Online Service.
 
 admin.py
 apps.py
@@ -200,19 +200,31 @@ views.py
 <hr/>
 * Accessibility
 
-accessibility tested with the [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/).
+Accessibility tested with the WAVE Web Accessibility Evaluation Tool
 
-WAVE report
+<details>
 
-  ![image](static/images/readme/wave.png)
+  ![image](static/css/images/wreport.png)
+</details>
+
 <hr/>
 
 ## Testing
 
-  Websit is responsive, tested it on different screen sizes (including cellphones screens).
+Website is responsive, tested it on different screen sizes (including cellphones screens).
 
-Google Doc
-![image](static/images/readme/manual-testing.png)
+I reviewed option of running tests automatically, however, for the aims of this project I decided to run testes manually. Since this is a small project (and I really went through the process of testing manually every link and button), these were the tests I ran:
+
+* Base html and Index render properly in the Landing (Home Page of website)
+* NavBar displays correctly always and changes depending on who is the user logged in.
+* Registration Page form works properly and creates user.
+* Posts links works properly, taking you to the specific post (Detail View). 
+* If user is registered, NavBar changes properly. If user is logged in can comment and like posts.
+* After commenting post is send to Admin auth. Comments were properly aproved. I deleted de comments after acception, so it works properly too.
+* Log in Page works properly.
+* Add Page Post works properly. Performed better without RichTextEditor.
+* Edit Profile and Change Password works properly.
+* After reviewing all pages, and worked successfully it was concluded that all url’s paths are working properly. All processed derived from this forms are executed properly as well. 
 
 <hr/>
 

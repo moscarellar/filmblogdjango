@@ -14,7 +14,7 @@
                     <div class="caption">
                         <div class="text-center-caption">
                             <h1 class="post-title fw-bolder text-uppercase">FilmPost Blog</h1>
-                            <h6 class="post-subtitle fw-bold">Art Films</h6>
+                            <h2 class="post-subtitle fw-bold">Art Films</h2>
                         </div>
                     </div>
                 </div>        
@@ -34,7 +34,7 @@
                             <div class="image-container">
                                 <a href="{% url 'post_detail' post.slug %}" class="text-dark text-decoration-none">
                                     {% if "placeholder" in post.featured_image.url %}
-                                    <img class="card-img-top rounded" width="auto" height="200" alt="FilmPost Blog placeholder image"
+                                    <img class="card-img-top rounded" height="200" alt="FilmPost Blog placeholder image"
                                         src="https://res.cloudinary.com/dxhzp2rnu/image/upload/v1662637144/cld-sample-3.jpg">
                                     {% else %}
                                     <img class="card-img-top" alt="Authors chosen image to represent the post"

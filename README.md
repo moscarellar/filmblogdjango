@@ -18,9 +18,12 @@
 # Project 4 - Code Institute Full Stack Diploma
 
 This is a blog created in Django for completion of 4th project at Code Institute (Full Stack Developer Course).
+
+This blog is a solution offered for a fictional Film Club. This club is conformed of elder population. The idea of this blog is to condense in one simple blog all the information regarding the movie sessions so it is easy to follow.
+
 Please find the link [here](https://djangofilmblog.herokuapp.com/).
 
-![log-in-wireframe](static/images/.png)
+![mock-up](static/css/images/mockup-project4.png)
 ***
 
 # User Stories and Design
@@ -50,191 +53,111 @@ Admin User Goals
 ***
 ### Design
 
-Imagery</summary>
-Images are mainly depicting 
-![Imagery](static/images/readme/readme-placeholder.jpg)
-
 Color Scheme</summary>
-Three colors are used in this website, these being #000000, #FFFFFF and #FF0030. The background, text and foreground colors have a sufficient contrast ratio to aid with accessibility.
+These are the colors used #3fcfff, #F8F9FA, 29ABC4, #47B8DB, 040E18.
 
-![Color Pallete](static/images/readme/palette.png)
-</details>
+![Color Pallete](static/css/images/colors.png)
 
-<details><summary>Fonts</summary>
-The font used throughout the website is Ssk. 
-![Fonts](static/images/readme/readme-font.png)
-</details>
-
+Fonts
+Roboto is the font choosed for this project.
 ***
 
 # Features
-## Existing Features
-<details><summary>Home Page</summary>
- 
-Home Page will display the base.html, which contains Log in or Register options.
-From Home Page user can access posts as well. 
 
-![image](https://user-imag6.png)
+<b>Home Page</b>
  
+Home Page incorporates base.html page, in which we can find the Nav Bar.
+Home Page let's us know if we are logged or if we may need to log in, or Register an account.
+
+![Home Page](static/css/images/homepage.png)
+
+<hr/>
+
+<b>Navigation Bar</b>
+
+We already showed the Nav Bar display with no logged account. 
+If the user is logged, we will see the HOME and USERNAME displayed. And the options in order to Edit Profile, Log Out (and Add Post if available) will be listed in a different level.
+
+<details>
+
+![Navbar](static/css/images/navbar.png)
 </details>
 
-<details><summary>Navigation Bar</summary>
- 
-The nav bar display changes depending on user access. If user is not staff or admin will be able to see EDIT PROFILE option and Log Out.
-If it is Admin or Staff User will have the option to Add Post.
-![image](https://user-images.githubusercontent.com/98277650/188749607-8643846a-77b6-4970-bdb8-edab95b1e5f2.png)
+<hr/>
 
-</details> 
+<b>Footer</b>
+Code Institute model was reused in order to generate a link to my LinkedIn.
 
-<details><summary>Footer</summary>
+<hr/>
+
+<b>Post View and Post Detail</b>
  
-Footer has link to LinkedIn.
-```
-![image](https://user-1ab900.png)
- 
+When landing to homepage User will be able to see the list of posts in the blog. These can be clicked and the user will go to the detail view.
+
+<details>
+
+![Post](static/css/images/postview.png)
+ </details>
+
+<hr/>
+
+<b>Like/Unlike, Post Comments</b>
+
+When logged in after registering you are able to Like/Unlike Posts and to Post Comments.
+
+<details>
+
+![Image](static/css/images/like.png)
 </details>
 
-<details><summary>Post Detail</summary>
- 
-When one of the posts on the home page is clicked, the user is taken to post detail view. Here the user can see the author, date/time posted and the content itself.
+<details>
 
+![Comments](static/css/images/comments.png)
+ </details>
 
+<hr/>
 
-The purpose of this is to fulfill the following user stories:
-```
-As a First Time User, I can choose a post I would like to inspect further.
-```
-![image](https://user-images.githubusercontent.com/98277650/188749721-9345eef1-0846-4a4d-b8be-72f458072e50.png)
- 
+<b>Add Post, Edit/Delete Post</b>
+
+After registering, and given the staff access, an user could Add, Edit or Delete Posts.
+
+<details>
+
+![image](static/css/images/AddEditPost.png)
 </details>
 
-<details><summary>Like/Unlike</summary>
- 
-Just below the post itself, two icons are visible. One of these being a clickable Like button that can only be interacted with when the user has logged in. The second icon shows the amount of comments the post has recieved.
+<hr/>
 
-The purpose of this is to fulfill the following user story:
-```
-As a Frequent User, I can like a post to show that I enjoyed it.
-```
-![image](static/images/readme/like-unlike.png)
-
-I also added a link that will enable the user to share the blog post to their own Twitter account.
-
-The purpose of this is to fulfill the following user story:
-```
-As a Frequent User, I can share a post to my own personal social media account.
-```
-![image](static/images/readme/twitter-share.png)
-
-</details>
-
-<details><summary>Post Comments</summary>
- 
-At the bottom of the post is the comments section, where the user is able to write and post a comment on the blog post.
-
-The purpose of this is to fulfill the following user story:
-```
-As a Frequent User, I can comment on a blog post with my thoughts on the subject.
-```
-![image](https://user-images.githubusercontent.com/98277650/188749804-bde80368-9193-471d-8a64-3e419e1adebe.png)
-
-When the user has posted a comment, an alert replaces the text field letting them know that their comment is awaiting inspection and approval.
-
-The purpose of this is to fulfill the following user story:
-```
-As an Admin, I can approve or disapprove comments so that I can filter out objectionable comments.
-```
-
-![image](https://user-images.githubusercontent.com/98277650/188749923-dfdab3c8-331c-47c1-99a0-e4f917a0f4af.png)
- 
-</details>
-
-<details><summary>Add Post</summary>
- 
-This page of the website allows the user to create their own blog post. I implemented a rich text editor which allows the user to add a bit more style to their post. For security reasons I have to give the user staff privileges to be able to post, which is common practice in other professional websites. This is to ensure that not just anyone off the internet can find my website and post questionable things.
-
-The purpose of this is to fulfill the following user stories:
-```
-As a Frequent User, I can create my own blog post and post it on the website.
-```
-![image](https://user-images.githubusercontent.com/98277650/188750032-7fd19423-9acf-4851-80fb-bb2af0e0365b.png)
-
-</details>
-
-<details><summary>Edit/Delete Post</summary>
- 
-When detected as author of the post, User can delete or edit it.
-
-![image](https://user-imag8277650/188750267-9fe41ace-f585-42a9-bafa-7c69fdb28e04.png)
-
-![image](https://user-imagom/98277650/188750296-f19bc082-072f-4a46-8a2a-2f2c240afc16.png)
-
-When the user clicks the delete button they are taken to a new page with a warning, making sure they are aware that they are about to permanently delete the post. This is so if they change their mind and want to keep it, they can.
-
-![image](https://user-images.githubusercontent.com/98277650/188750325-c4fde938-07be-45cd-b2bd-5104da48feb0.png)
-
-</details>
-
-<details><summary>Register</summary>
- 
-User can register and after registration will gain access to commenting, and if authorized, to make posts.
-![image](static/images/readme/register.png)
-
-</details>
-
-<details><summary>Log In</summary>
+<b>Log In</b>
  
 User can log in to account make likes, comments and, if authorized, make posts.
-```
+
+<details>
+
 ![image](static/images/login.png)
-
 </details>
 
-<details><summary>Edit Profile</summary>
+<hr/>
+
+<b>Edit Profile/Password</b>
  
-User can edit and update:
-* Username
-* Email
-* First Name
-* Last Name
+User can edit and update Profile, and from Profile there is a Change Password Option.
 
-The purpose of this is to fulfill the following user stories:
-```
-As a Frequent User, I can change aspects of my personal account details.
-```
-![image](https://user-images.githubusercontent.com/98277650/188750457-33d23728-d41b-4f35-b28f-2f82f222a4ee.png)
+<details>
 
+![Edit](static/css/images/editprofile.png)
+![Password](static/css/images/password.png)
 </details>
 
-<details><summary>Change Password</summary>
- 
-Change password is an option provided within the Edit Profile site.
-![image](3c1.png)
-
-When the user has confirmed their new password, they are taken to a page informing them that the change was successful.
-
-![image](https://user-images.githubusercontent.cog)
-
-</details>
-
-***
+<hr/>
 
 # Technologies
 
-* HTML
-* CSS
-* JavaScript](https://en.wikipedia.org/wiki/JavaScript)
-* Django](https://en.wikipedia.org/wiki/Django_(web_framework))
-* Bootstrap](https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework))
-* Heroku
-* Font Awesome](https://fontawesome.com/)
-* Google Fonts](https://fonts.google.com/)
+The technologies used for this project are: HTML, CSS, JS, Booststrap, Django, Heroku, Google Fonts.
 
 ***
 
 # Testing
-
-## Validator Testing
 
 ### Code Validation
 
@@ -244,133 +167,70 @@ Code was validated through various sources:
 
   All HTML code was checked with the [W3C Markup Validation Service](https://validator.w3.org/).
 
-   <details>
-   <summary>Home Page</summary>
-
    ![image](https://user-images.deb5.png)
-
-   </details>
-   <details>
-   <summary>Post Detail</summary>
-
-   ![image](https://use81ebacb.png)
-
-   </details>
-   <details>
-   <summary>Sign Up</summary>
-
-   ![image](https://user3f1.png)
-
-   </details>
-   <details>
-   <summary>Log In</summary>
-
-   ![image](https://uspng)
-
-   </details>
-   <details>
-   <summary>Add Post</summary>
-
-   One error returned. As seen in the code below, I have had to use {{ form.as_p }} to get the rich text editor to function correctly. As of right now I am unsure of a solution.
-
-   ![image](https://user-images.githubusercontent.com/98277650/187972452-e1a36e47-c8ec-4367-9b6a-595ed69114de.png)
-
-
-   ![image](https://user-images.githubusercontent.com/98277650/187972057-046a277d-71b6-4eac-8f6a-1754f95f633f.png)
-
-   </details>
-   <details>
-   <summary>Edit Profile</summary>
-
-   I was unable to validate this page due to the page only being accessible to a user who is logged in and able to edit their profile.
-
-   ![image](https://user-images.githubusercontent.com/98277650/187972974-6047d7bb-40ea-4596-9c23-f18c3a808ccc.png)
-
-   </details>
-   <details>
-   <summary>Log Out</summary>
-
-   ![image](https://user-images.githubusercontent.com/98277650/187973621-a01a08f4-4271-4ef0-826e-7f3eb836001f.png)
-
-   </details>
    
 * CSS Validation
 
   All CSS code was checked with the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/).
 
-   <details>
-   <summary>CSS Results</summary>
+<details>
 
    ![image](https://user-images.githubusercontent.com/98277650/187975424-1d87fd98-b930-4009-874a-adbb4210bd86.png)
+</details>
 
-   </details>
-   
 * Python Validation
 
   All Python code was checked with the [PEP8 Online Service](http://pep8online.com/).
 
-  <details>
-  <summary>admin.py</summary>
-
+ admin.py
   ![image](https://user-images.githubusercontent.com/98277650/188003211-31fd93b3-c8bb-4e13-ab52-b9ef5f929f03.png)
-
-  </details>
-  <details>
-  <summary>apps.py</summary>
-
-  ![image](https://user-images.githubusercontent.com/98277650/188003527-aa13b4d9-f627-474e-a6d2-8aafae96a2f9.png)
-
-  </details>
-  <details>
-  <summary>forms.py</summary>
-
+apps.py
+ (https://user-images.githubusercontent.com/98277650/188003527-aa13b4d9-f627-474e-a6d2-8aafae96a2f9.png)
+forms.py
   ![image](https://user-images.githubusercontent.com/98277650/188004880-1f45b1fa-234b-42d9-9b09-01a9201fb825.png)
-
-  </details>
-  <details>
-  <summary>models.py</summary>
-
+models.py
   ![image](https://user-images.githubusercontent.com/98277650/188005177-1c8a8ed1-2d8a-4de6-aab0-e5c2b07e8efc.png)
-
-  </details>
-  <details>
-  <summary>urls.py</summary>
-
+urls.py
   ![image](https://user-images.githubusercontent.com/98277650/188005370-ba06262e-cb7e-4d7f-b5a2-443bd9b1282a.png)
-
-  </details>
-  <details>
-  <summary>views.py</summary>
-
+views.py
   ![image](https://user-images.githubusercontent.com/98277650/188005494-cc4cd2bd-4cd8-446a-a2a2-0681761026f8.png)
-
-  </details>
 
 * Accessibility
 
 accessibility tested with the [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/).
 
-  <details>
-  <summary>WAVE report</summary>
+WAVE report
 
   ![image](static/images/readme/wave.png)
-
-  </details>
 
 ## Testing
 
   Websit is responsive, tested it on different screen sizes (including cellphones screens).
 
-  <details><summary>Google Doc</summary>
+Google Doc
+![image](static/images/readme/manual-testing.png)
 
-  ![image](static/images/readme/manual-testing.png)
-
-  </details>
-
-***
 
 ## Bugs
-This project was specially difficult for me in . 
+This project was specially difficult for me. After finishing the Code Institute Module I had a lot of complications in the project, my solutions most times was to repeat the module several times (for which I opened several repositories, as everytime I tried to go further I was unable to find the solution).
+
+I began developing several tutorials from Youtube. Specially based on these 2 channels:
+
+https://www.youtube.com/playlist?list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi
+https://www.youtube.com/watch?v=OBsLgCm-Ayo&list=PL_KegS2ON4s580mS3nPt5x_eu6kO2cvOc
+
+Finally, after reviewing the project several times (Youtube tutorials, Google Search and Slack community) I was able to perceive that some components have not been correctly installed. 
+
+My first bug was related to not writing down the installed components on setttings.py
+I had issues installing the CKEditor as well. The first times after installation it was working well in the Add Post Html, however, after a few pushes, I got errors and I was not able to post (not even from the Admin Page).
+
+As a solution I decided not to declare the content as RichFont, and in step, keep using the normal text editor.
+
+I also found a way to develop a Script which determined the author of the posts from the User Login name.
+
+My process in order to work with this process was more about gathering the pieces of code that worked for me and personalizing it so I can feel confortable and understand the code written here to 100%.
+
+Some aesthethic details were not priorized as I already had a lot of difficulties with CSS (for some reason it took long time to update changes and show them to me when runing server locally). Only when pushed I was able to see the final details.
 
 ***
 

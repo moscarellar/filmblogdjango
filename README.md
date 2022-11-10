@@ -1,18 +1,13 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 # Table of contents
-* [User Experience](#user-experience)
-  * [User Stories](#user-stories) 
-  * [Design](#design)
-* [Features](#features)
-  * [Existing Features](#existing-features)
-  * [Features Left To Implement](#features-left-to-implement)
+
+* [User Experience (UX)](#User-Experience-(UX))
+* [Design](#Design)
+* [Features](#Features)
 * [Technologies](#technologies)
-* [Testing](#testing)
-  * [Validator Testing](#validator-testing)
-  * [Manual Testing](#manual-testing)
-  * [Bugs](#bugs)
-* [Deployment](#deployment)
+* [Testing](#Testing)
+* [Deployment](#Deployment)
 * [Credits](#credits)
 
 # Project 4 - Code Institute Full Stack Diploma
@@ -26,9 +21,8 @@ Please find the link [here](https://djangofilmblog.herokuapp.com/).
 ![mock-up](static/css/images/mockup-project4.png)
 ***
 
-# User Stories and Design
+## User Experience (UX)
 
-### First Time User Goals
 First Time User Goals
 
 * As a First Visit User, I understand the objective of the blog.
@@ -51,9 +45,9 @@ Admin User Goals
 * As an Admin, I can determine specific level of priviledge of users in order to post blogs.
 
 ***
-### Design
+## Design
 
-Color Scheme</summary>
+Color Pallette
 These are the colors used #3fcfff, #F8F9FA, 29ABC4, #47B8DB, 040E18.
 
 ![Color Pallete](static/css/images/colors.png)
@@ -62,7 +56,7 @@ Fonts
 Roboto is the font choosed for this project.
 ***
 
-# Features
+## Features
 
 <b>Home Page</b>
  
@@ -151,13 +145,13 @@ User can edit and update Profile, and from Profile there is a Change Password Op
 
 <hr/>
 
-# Technologies
+## Technologies
 
 The technologies used for this project are: HTML, CSS, JS, Booststrap, Django, Heroku, Google Fonts.
 
 ***
 
-# Testing
+## Testing
 
 ### Code Validation
 
@@ -189,14 +183,6 @@ Code validation as follows:
 
  Python code was checked with the PEP8 Online Service.
 
-admin.py
-apps.py
-forms.py
-models.py
-urls.py
-views.py
-
-
 <hr/>
 * Accessibility
 
@@ -209,7 +195,7 @@ Accessibility tested with the WAVE Web Accessibility Evaluation Tool
 
 <hr/>
 
-## Testing
+### Manual Testing
 
 Website is responsive, tested it on different screen sizes (including cellphones screens).
 
@@ -252,7 +238,7 @@ Some aesthethic details were not priorized as I already had a lot of difficultie
 
 ***
 
-# Deployment
+## Deployment
 * Code Institute template was use to create project
 * Make instalations in Gitpod
 * As per tutorial recommendations, project was deployed from first commitment.
@@ -262,7 +248,7 @@ Some aesthethic details were not priorized as I already had a lot of difficultie
 
 ***
 
-# Credits
+## Credits
 My project was heavily based on Code Institute tutorials. I also learnt different approaches from Youtube and reutilize code from several projects.
 https://www.youtube.com/playlist?list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi
 https://www.youtube.com/watch?v=OBsLgCm-Ayo&list=PL_KegS2ON4s580mS3nPt5x_eu6kO2cvOc

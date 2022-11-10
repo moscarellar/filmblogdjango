@@ -6,25 +6,13 @@
 
 {% block content %}
 <header>
-    <div class="container-fluid" id="image">
-        <div class="row px-4 text-center">
-            <img class="img-fluid header-image" id="main-background"
-                src="https://res.cloudinary.com/dxhzp2rnu/image/upload/v1667151640/Screen_Shot_2022-10-30_at_17.39.19_remz5u.png"
-                alt="blue/pink background image">
-            <div class="col-lg-6 mx-auto">
-                <div class="caption">
-                    <div class="text-center-caption">
-                        <h1 class="post-title fw-bolder text-uppercase">{% trans "Sign Up" %}</h1>
-                        <h6 class="post-subtitle fw-bold">{% blocktrans %}Posts about your favourite films. Do you already have
-                            an account? Then
-                            please <a class="link text-decoration-underline" id="sign-up" href="{{ login_url }}">sign
-                                in</a> instead.{% endblocktrans %}
-                        </h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+            
+    <div class="tittle">
+        <h1 >Sign Up</h1>
+        <h6>If you already have an account, please <a class="link text-decoration-underline" id="sign-up" href="{{ login_url }}">sign
+                in</a> instead.
+        </h6>                            
+</div>
 </header>
 
 <div class="row">

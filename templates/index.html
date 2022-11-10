@@ -9,7 +9,7 @@
 </div>
 
 <div class="container-fluid">
-    <div class="row mb-5">
+    <div class="row">
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for post in post_list %}
@@ -17,25 +17,24 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
-                                <a href="{% url 'post_detail' post.slug %}" class="text-dark text-decoration-none">
-                                    {% if "placeholder" in post.featured_image.url %}
-                                    <img class="card-img-top rounded" height="200" alt="FilmPost Blog placeholder"
-                                        src="https://res.cloudinary.com/dxhzp2rnu/image/upload/v1662637144/cld-sample-3.jpg">
-                                    {% else %}
-                                    <img class="card-img-top" alt="Authors chosen image to represent the post"
-                                        src=" {{ post.featured_image.url }}">
-                                    {% endif %}
-                                    <div class="image-flash">
-                                        <p class="fw-bold author">Author: {{ post.author }}</p>
-                                    </div>
+                                {% if "placeholder" in post.featured_image.url %}
+                                <img class="card-img-top" height="200" alt="FilmPost Blog placeholder"
+                                    src="https://res.cloudinary.com/dxhzp2rnu/image/upload/v1662637144/cld-sample-3.jpg">
+                                {% else %}
+                                <img class="card-img-top" alt="image to represent the post"
+                                    src=" {{ post.featured_image.url }}">
+                                {% endif %}
+                                <div class="image-flash">
+                                    <p class="fw-bold author">Author: {{ post.author }}</p>
+                                </div>
                                 </a>
                             </div>
-                            <a href="{% url 'post_detail' post.slug %}" class="text-dark text-decoration-none">
+                            <a href="{% url 'post_detail' post.slug %}" class="post-link">
                                 <h2 class="card-title">{{ post.title }}</h2>
                                 <p class="card-text">{{ post.excerpt }}</p>
                             </a>
                             <hr>
-                            <p class="card-text text-muted h6 rounded">{{ post.created_on}} <i class="far fa-heart"></i>
+                            <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
                                 {{ post.number_of_likes }}
                             </p>
                         </div>
@@ -54,10 +53,10 @@
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="btn btn-signup right" id="button">&laquo; PREV </a></li>
+            <li><a href="?page={{ page_obj.previous_page_number }}" class="btn btn-signup" id="button">PREV </a></li>
             {% endif %}
             {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="btn btn-signup right" id="button"> NEXT &raquo;</a></li>
+            <li><a href="?page={{ page_obj.next_page_number }}" class="btn btn-signup" id="button"> NEXT</a></li>
 
             {% endif %}
         </ul>

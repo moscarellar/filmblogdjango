@@ -7,6 +7,7 @@
 * [Features](#Features)
 * [Technologies](#technologies)
 * [Testing](#Testing)
+* [For the future](#For-the-future)
 * [Deployment](#Deployment)
 * [Credits](#credits)
 
@@ -216,7 +217,8 @@ I reviewed option of running tests automatically, however, for the aims of this 
 
 
 ## Bugs
-This project was specially difficult for me. After finishing the Code Institute Module I had a lot of complications in the project, my solutions most times was to repeat the module several times (for which I opened several repositories, as everytime I tried to go further I was unable to find the solution).
+This project was specially difficult for me. After finishing the Code Institute Module I had a lot of complications in the project. 
+My solutions most times was to repeat the module several times (for which I opened several repositories, as everytime I tried to go further I was unable to find the solution).
 
 I began developing several tutorials from Youtube. Specially based on these 2 channels:
 
@@ -228,15 +230,20 @@ Finally, after reviewing the project several times (Youtube tutorials, Google Se
 My first bug was related to not writing down the installed components on setttings.py
 I had issues installing the CKEditor as well. The first times after installation it was working well in the Add Post Html, however, after a few pushes, I got errors and I was not able to post (not even from the Admin Page).
 
-As a solution I decided not to declare the content as RichFont, and in step, keep using the normal text editor.
+As a solution I decided not to declare the content as RichFontEditor, and in step, keep using the normal text editor.
 
 I also found a way to develop a Script which determined the author of the posts from the User Login name.
 
 My process in order to work with this process was more about gathering the pieces of code that worked for me and personalizing it so I can feel confortable and understand the code written here to 100%.
 
 Some aesthethic details were not priorized as I already had a lot of difficulties with CSS (for some reason it took long time to update changes and show them to me when runing server locally). Only when pushed I was able to see the final details.
-
 ***
+
+## For the future
+
+As I feel I learned an enough amount to be ready for Project 5 (with a lot of challenges overcomed), I would like to incorporate Rich Text Editor.
+I would like to enable login with Google or Facebook APIs.
+I believe there is an opportunity for growth in relation to CSS.
 
 ## Deployment
 * Code Institute template was use to create project
@@ -249,6 +256,10 @@ Some aesthethic details were not priorized as I already had a lot of difficultie
 ***
 
 ## Credits
-My project was heavily based on Code Institute tutorials. I also learnt different approaches from Youtube and reutilize code from several projects.
-https://www.youtube.com/playlist?list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi
-https://www.youtube.com/watch?v=OBsLgCm-Ayo&list=PL_KegS2ON4s580mS3nPt5x_eu6kO2cvOc
+My project was heavily based on Code Institute tutorials. 
+I also learnt different approaches from Youtube and reutilize code from several projects.
+The slack community was very important in order to find solutions already shared.
+
+If you copy these links, they will take you to the Channels and Playlist I used for this project.
+* [Channel 1](https://www.youtube.com/playlist?list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi) 
+* [Channel 2](https://www.youtube.com/watch?v=OBsLgCm-Ayo&list=PL_KegS2ON4s580mS3nPt5x_eu6kO2cvOc)

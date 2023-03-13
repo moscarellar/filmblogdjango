@@ -3,6 +3,7 @@
 # Table of contents
 
 * [User Experience (UX)](#User-Experience-(UX))
+* [Agile](#Agile)
 * [Design](#Design)
 * [Features](#Features)
 * [Technologies](#technologies)
@@ -46,6 +47,16 @@ Admin User Goals
 * As an Admin, I can determine specific level of priviledge of users in order to post blogs.
 
 ***
+## Agile
+
+Please find the link [here](https://github.com/users/moscarellar/projects/2/views/1)
+
+Project tool was use in order to manage the planning and implementation of functionalities.
+Also User Stories were mapped within the Project used as support for Agile Methodoloy.
+
+
+![Color Pallete](static/css/images/agile.jpg)
+
 ## Design
 
 Color Pallette
